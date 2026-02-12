@@ -1,0 +1,57 @@
+/* FILE: /var/www/app/frontend/src/App.css */
+
+/* Wenn du vorher alles gelöscht hast: JA, das war zu aggressiv.
+   Du brauchst mindestens diese globalen Regeln für die Zahlen-Schrift (0 mit Punkt / OpenType "zero"). */
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1; /* "zero" aktiviert dotted/slashed zero, wenn Font es kann */
+}
+
+/* Optional: ein bisschen Basis, damit nicht “alles schwarz” wirkt, falls irgendwo CSS weg ist */
+html, body, #root {
+  height: 100%;
+}
+
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Optional Noise Hintergrund ===== */
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+
+/* ===== GLOBAL ZAHLEN STYLE ===== */
+:root {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+html, body,
+button, input, textarea, select {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.countdown-numbers,
+.clock-numbers {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}

@@ -1,0 +1,204 @@
+{
+  "settings": {
+    "eventName": "Event Dashboard",
+    "theme": "light",
+    "timezone": "Europe/Berlin",
+    "is_paused": false,
+    "event_name": "Event Dashboard",
+    "primary_color": "#3b82f6",
+    "accent_color": "#ff0000",
+    "background_color": "#09090b",
+    "surface_color": "#18181b",
+    "text_color": "#fafafa",
+    "event_date": "",
+    "show_countdown": true,
+    "auto_scroll": false,
+    "auto_advance": false,
+    "current_item_id": null
+  },
+  "schedule": [
+    {
+      "id": "1769364258196",
+      "title": "test eintrag",
+      "description": "",
+      "start_time": "22:00",
+      "end_time": "23:59",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": true
+    },
+    {
+      "id": "1769421275048",
+      "title": "Aufbau",
+      "description": "",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "phase_id": "1",
+      "notes": "Probe Anspiel",
+      "is_current": false
+    },
+    {
+      "id": "1769421327916",
+      "title": "Aufbau",
+      "description": "",
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "phase_id": "1",
+      "notes": "Generalprobe",
+      "is_current": false
+    },
+    {
+      "id": "1769421368070",
+      "title": "Mittagessen",
+      "description": "",
+      "start_time": "12:00",
+      "end_time": "12:30",
+      "phase_id": "1",
+      "notes": "Mittagessen (Adelheid)",
+      "is_current": false
+    },
+    {
+      "id": "1769421509460",
+      "title": "Besprechung",
+      "description": "",
+      "start_time": "12:30",
+      "end_time": "13:00",
+      "phase_id": "1",
+      "notes": "MA-Besprechung mit allen",
+      "is_current": false
+    },
+    {
+      "id": "1769421541257",
+      "title": "Besprechung",
+      "description": "",
+      "start_time": "13:15",
+      "end_time": "13:30",
+      "phase_id": "1",
+      "notes": "MA-Gebetsrunde",
+      "is_current": false
+    },
+    {
+      "id": "1769421575613",
+      "title": "Einlass 🥳",
+      "description": "",
+      "start_time": "13:30",
+      "end_time": "14:00",
+      "phase_id": "1769362929661",
+      "notes": "ca. ab 13:35 Vor-Unterhaltungsprogramm",
+      "is_current": false
+    },
+    {
+      "id": "1769421686835",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:05",
+      "end_time": "14:08",
+      "phase_id": "2",
+      "notes": "Tschikitschiki bi ba bo\n• Herzlich Willkommen. Ihr\ndürft zum 1. Lied alle \naufstehen!",
+      "is_current": false
+    },
+    {
+      "id": "1769421726134",
+      "title": "Begrüßung",
+      "description": "Moderation",
+      "start_time": "14:08",
+      "end_time": "14:12",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false
+    },
+    {
+      "id": "1769421769062",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:12",
+      "end_time": "14:16",
+      "phase_id": "2",
+      "notes": "Sei ein lebendger Fisch.",
+      "is_current": false
+    },
+    {
+      "id": "1769421809410",
+      "title": "Infos + Spiel",
+      "description": "Moderation",
+      "start_time": "14:16",
+      "end_time": "14:20",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false
+    },
+    {
+      "id": "1769422050916",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:20",
+      "end_time": "14:28",
+      "phase_id": "2",
+      "notes": "Jesus fertig los\n(Themalied)",
+      "is_current": false
+    },
+    {
+      "id": "1769422095678",
+      "title": "Anspiel",
+      "description": "Schauspieler",
+      "start_time": "14:28",
+      "end_time": "14:32",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false
+    },
+    {
+      "id": "1769422128972",
+      "title": "Andacht",
+      "description": "Lena",
+      "start_time": "14:32",
+      "end_time": "14:44",
+      "phase_id": "2",
+      "notes": "mit Gebet",
+      "is_current": false
+    },
+    {
+      "id": "1769422165780",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:44",
+      "end_time": "14:48",
+      "phase_id": "2",
+      "notes": "Weißt du wer ich bin",
+      "is_current": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "1",
+      "name": "Preparation",
+      "active": false,
+      "color": "#6366f1"
+    },
+    {
+      "id": "2",
+      "name": "Live Event",
+      "active": true,
+      "color": "#22c55e"
+    },
+    {
+      "id": "3",
+      "name": "Aftershow",
+      "active": false,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "1769362929661",
+      "name": "Einlass",
+      "color": "#06b6d4",
+      "order": 3
+    },
+    {
+      "id": "1769422182716",
+      "name": "Spiel Straße",
+      "color": "#ec4899",
+      "order": 4
+    }
+  ],
+  "created": "2026-01-26T10:09:59.616Z"
+}

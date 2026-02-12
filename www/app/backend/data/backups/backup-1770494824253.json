@@ -1,0 +1,896 @@
+{
+  "settings": {
+    "eventName": "Event Dashboard",
+    "theme": "light",
+    "timezone": "Europe/Berlin",
+    "is_paused": false,
+    "event_name": "KiNa 26",
+    "primary_color": "#3b82f6",
+    "accent_color": "#ef4444",
+    "background_color": "#09090b",
+    "surface_color": "#18181b",
+    "text_color": "#fafafa",
+    "event_date": "2026-02-17",
+    "show_countdown": true,
+    "auto_scroll": true,
+    "auto_advance": true,
+    "current_item_id": "1769447944191"
+  },
+  "schedule": [
+    {
+      "id": "1769364258196",
+      "title": "test eintrag",
+      "description": "",
+      "start_time": "22:00",
+      "end_time": "23:59",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false,
+      "people": [
+        "1769502585521"
+      ],
+      "groups": [
+        "1769530614834"
+      ]
+    },
+    {
+      "id": "1769421275048",
+      "title": "Aufbau",
+      "description": "",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "phase_id": "1",
+      "notes": "Probe Anspiel",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769694595300",
+        "1769530614834",
+        "1769692678210"
+      ]
+    },
+    {
+      "id": "1769421327916",
+      "title": "Aufbau",
+      "description": "",
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "phase_id": "1",
+      "notes": "Generalprobe",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692904714",
+        "1769692877604",
+        "1769692826152"
+      ]
+    },
+    {
+      "id": "1769421368070",
+      "title": "Mittagessen",
+      "description": "",
+      "start_time": "12:00",
+      "end_time": "12:30",
+      "phase_id": "1",
+      "notes": "Mittagessen (Adelheid)",
+      "is_current": false,
+      "people": [
+        "1769691844035"
+      ],
+      "groups": [
+        "1769694595300"
+      ]
+    },
+    {
+      "id": "1769421509460",
+      "title": "Besprechung",
+      "description": "",
+      "start_time": "12:30",
+      "end_time": "13:00",
+      "phase_id": "1",
+      "notes": "MA-Besprechung mit allen",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769694595300"
+      ]
+    },
+    {
+      "id": "1769421541257",
+      "title": "Besprechung",
+      "description": "",
+      "start_time": "13:15",
+      "end_time": "13:30",
+      "phase_id": "1",
+      "notes": "MA-Gebetsrunde",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769694595300"
+      ]
+    },
+    {
+      "id": "1769421575613",
+      "title": "Einlass 🥳",
+      "description": "",
+      "start_time": "13:30",
+      "end_time": "14:00",
+      "phase_id": "1769362929661",
+      "notes": "ca. ab 13:35 Vor-Unterhaltungsprogramm",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692796076",
+        "1769692957566",
+        "1769693053099"
+      ]
+    },
+    {
+      "id": "1769421686835",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:05",
+      "end_time": "14:08",
+      "phase_id": "2",
+      "notes": "Tschikitschiki bi ba bo\n• Herzlich Willkommen. Ihr\ndürft zum 1. Lied alle \naufstehen!",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692826152"
+      ]
+    },
+    {
+      "id": "1769421726134",
+      "title": "Begrüßung",
+      "description": "Moderation",
+      "start_time": "14:08",
+      "end_time": "14:12",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692904714"
+      ]
+    },
+    {
+      "id": "1769421769062",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:12",
+      "end_time": "14:16",
+      "phase_id": "2",
+      "notes": "Sei ein lebendger Fisch.",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692826152"
+      ]
+    },
+    {
+      "id": "1769421809410",
+      "title": "Infos + Spiel",
+      "description": "Moderation",
+      "start_time": "14:16",
+      "end_time": "14:20",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692904714"
+      ]
+    },
+    {
+      "id": "1769422050916",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:20",
+      "end_time": "14:28",
+      "phase_id": "2",
+      "notes": "Jesus fertig los\n(Themalied)",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692826152"
+      ]
+    },
+    {
+      "id": "1769422095678",
+      "title": "Anspiel",
+      "description": "Schauspieler",
+      "start_time": "14:28",
+      "end_time": "14:32",
+      "phase_id": "2",
+      "notes": "",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769628466866",
+        "1769692877604"
+      ]
+    },
+    {
+      "id": "1769422128972",
+      "title": "Andacht",
+      "description": "Lena",
+      "start_time": "14:32",
+      "end_time": "14:44",
+      "phase_id": "2",
+      "notes": "mit Gebet",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769628466866",
+        "1769530614834"
+      ]
+    },
+    {
+      "id": "1769422165780",
+      "title": "Lied",
+      "description": "Band",
+      "start_time": "14:44",
+      "end_time": "14:48",
+      "phase_id": "2",
+      "notes": "Weißt du wer ich bin",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692826152"
+      ]
+    },
+    {
+      "id": "1769422292183",
+      "title": "Spiel Straße",
+      "description": "Moderation und alle Mittarbeiter",
+      "start_time": "14:48",
+      "end_time": "16:45",
+      "phase_id": "1769422182716",
+      "notes": "• Erklärung\n• Abschluss m. Siegerehrung \n• (Pufferspiel)",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769691331698",
+        "1769693053099",
+        "1769693241987"
+      ]
+    },
+    {
+      "id": "1769423334625",
+      "title": "Lied",
+      "description": "",
+      "start_time": "16:47",
+      "end_time": "16:51",
+      "phase_id": "2",
+      "notes": "Jesus fertig los\n(Themalied)",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692826152"
+      ]
+    },
+    {
+      "id": "1769423920103",
+      "title": "Verabschiedung + Lied",
+      "description": "Moderation + Band +Technik",
+      "start_time": "16:51",
+      "end_time": "17:00",
+      "phase_id": "3",
+      "notes": "Lied 6: Weißt du wer ich bin\nLied 7: Sei mutig & stark \n(Segenslied)",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769530614834",
+        "1769692593514",
+        "1769692826152",
+        "1769692904714"
+      ]
+    },
+    {
+      "id": "1769424005694",
+      "title": "Ende & Abbau",
+      "description": "Alle Mitarbeiter und Eltern",
+      "start_time": "17:00",
+      "end_time": "18:30",
+      "phase_id": "3",
+      "notes": "• 17:15 gesammelt an der\nBühne",
+      "is_current": false,
+      "people": [],
+      "groups": [
+        "1769694595300"
+      ]
+    },
+    {
+      "id": "1769447944191",
+      "title": "DC Chillen",
+      "description": "auf Team Diamant\n\nhttps://discord.gg/BzWWTMmqWZ",
+      "start_time": "18:30",
+      "end_time": "23:00",
+      "phase_id": "3",
+      "notes": "",
+      "people": [
+        "1769502585521"
+      ],
+      "groups": [
+        "1769530614834"
+      ],
+      "is_current": true
+    },
+    {
+      "id": "1769499961086",
+      "title": "Aufbau  früh",
+      "description": "",
+      "start_time": "08:30",
+      "end_time": "10:00",
+      "phase_id": "1",
+      "notes": "Technik kontrollieren, alles einmal testen.",
+      "people": [
+        "1769503515742",
+        "1769502585521"
+      ],
+      "groups": [],
+      "is_current": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "1",
+      "name": "Preparation",
+      "active": false,
+      "color": "#6366f1"
+    },
+    {
+      "id": "2",
+      "name": "Live Event",
+      "active": true,
+      "color": "#22c55e"
+    },
+    {
+      "id": "3",
+      "name": "Aftershow",
+      "active": false,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "1769362929661",
+      "name": "Einlass",
+      "color": "#06b6d4",
+      "order": 3
+    },
+    {
+      "id": "1769422182716",
+      "name": "Spiel Straße",
+      "color": "#ec4899",
+      "order": 4
+    }
+  ],
+  "people": [
+    {
+      "id": "1769502585521",
+      "name": "Luca",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-27T08:29:45.521Z"
+    },
+    {
+      "id": "1769503515742",
+      "name": "Chris",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-27T08:45:15.743Z"
+    },
+    {
+      "id": "1769680432908",
+      "name": "Lena",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T09:53:52.910Z"
+    },
+    {
+      "id": "1769691844035",
+      "name": "Adelheid",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:04.035Z"
+    },
+    {
+      "id": "1769691851627",
+      "name": "Naemi",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:11.627Z"
+    },
+    {
+      "id": "1769691858474",
+      "name": "Nico S.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:18.474Z"
+    },
+    {
+      "id": "1769691869067",
+      "name": "Kathrin",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:29.067Z"
+    },
+    {
+      "id": "1769691874962",
+      "name": "Luise R.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:34.962Z"
+    },
+    {
+      "id": "1769691878618",
+      "name": "Tami",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:38.618Z"
+    },
+    {
+      "id": "1769691883658",
+      "name": "Johannes B.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:43.659Z"
+    },
+    {
+      "id": "1769691892946",
+      "name": "Anna",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:52.946Z"
+    },
+    {
+      "id": "1769691899538",
+      "name": "Elisa",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:04:59.538Z"
+    },
+    {
+      "id": "1769691904629",
+      "name": "Luisa",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:04.629Z"
+    },
+    {
+      "id": "1769691911331",
+      "name": "Jonathan",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:11.331Z"
+    },
+    {
+      "id": "1769691918224",
+      "name": "Paul",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:18.224Z"
+    },
+    {
+      "id": "1769691926643",
+      "name": "Hanna",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:26.644Z"
+    },
+    {
+      "id": "1769691932823",
+      "name": "Sven F.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:32.823Z"
+    },
+    {
+      "id": "1769691950532",
+      "name": "Eva",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:50.533Z"
+    },
+    {
+      "id": "1769691954923",
+      "name": "Michelle",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:05:54.923Z"
+    },
+    {
+      "id": "1769691962927",
+      "name": "Lilith",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:06:02.927Z"
+    },
+    {
+      "id": "1769691966972",
+      "name": "Melina",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:06:06.972Z"
+    },
+    {
+      "id": "1769691981391",
+      "name": "Noah",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:06:21.391Z"
+    },
+    {
+      "id": "1769691992471",
+      "name": "Max",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:06:32.471Z"
+    },
+    {
+      "id": "1769692251492",
+      "name": "Olivia",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:10:51.492Z"
+    },
+    {
+      "id": "1769692260336",
+      "name": "David",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:11:00.336Z"
+    },
+    {
+      "id": "1769692273965",
+      "name": "Johannes F.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:11:13.965Z"
+    },
+    {
+      "id": "1769692320933",
+      "name": "Luisa R.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:12:00.933Z"
+    },
+    {
+      "id": "1769692338746",
+      "name": "Johannes W.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:12:18.746Z"
+    },
+    {
+      "id": "1769692347167",
+      "name": "Hannes B.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:12:27.167Z"
+    },
+    {
+      "id": "1769692366053",
+      "name": "Gerdi",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:12:46.053Z"
+    },
+    {
+      "id": "1769692383576",
+      "name": "Olivia W.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:13:03.576Z"
+    },
+    {
+      "id": "1769692408957",
+      "name": "Alea H.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:13:28.957Z"
+    },
+    {
+      "id": "1769692433551",
+      "name": "Jonathan M.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:13:53.551Z"
+    },
+    {
+      "id": "1769692507944",
+      "name": "Elisabeth G.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:15:07.944Z"
+    },
+    {
+      "id": "1769692525639",
+      "name": "Nico W.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:15:25.639Z"
+    },
+    {
+      "id": "1769692533038",
+      "name": "Hanna B.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:15:33.038Z"
+    },
+    {
+      "id": "1769692547280",
+      "name": "Dani H.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:15:47.280Z"
+    },
+    {
+      "id": "1769692992649",
+      "name": "Kai",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:23:12.649Z"
+    },
+    {
+      "id": "1769693023233",
+      "name": "Elias",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:23:43.233Z"
+    },
+    {
+      "id": "1769693248143",
+      "name": "Lisa",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:27:28.143Z"
+    },
+    {
+      "id": "1769693327094",
+      "name": "Jara S.",
+      "tag": "",
+      "color": "#22c55e",
+      "created": "2026-01-29T13:28:47.094Z"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1769530614834",
+      "name": "Technik",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769502585521",
+        "1769503515742"
+      ],
+      "created": "2026-01-27T16:16:54.836Z",
+      "members": [
+        "1769502585521"
+      ]
+    },
+    {
+      "id": "1769530624984",
+      "name": "Verantwortlicher",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769503515742"
+      ],
+      "created": "2026-01-27T16:17:04.984Z"
+    },
+    {
+      "id": "1769628466866",
+      "name": "Prediger/-in",
+      "color": "#06b6d4",
+      "member_ids": [],
+      "created": "2026-01-28T19:27:46.867Z"
+    },
+    {
+      "id": "1769691331698",
+      "name": "Spielstraße",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769503515742"
+      ],
+      "created": "2026-01-29T12:55:31.699Z"
+    },
+    {
+      "id": "1769692593514",
+      "name": "Band",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769691851627",
+        "1769691858474",
+        "1769691869067",
+        "1769691874962",
+        "1769691878618",
+        "1769691883658"
+      ],
+      "created": "2026-01-29T13:16:33.514Z"
+    },
+    {
+      "id": "1769692678210",
+      "name": "Dekoteam",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769691892946",
+        "1769691899538",
+        "1769691904629"
+      ],
+      "created": "2026-01-29T13:17:58.211Z"
+    },
+    {
+      "id": "1769692796076",
+      "name": "Anmeldung & Begrüßung",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769691911331",
+        "1769691918224",
+        "1769691878618",
+        "1769691926643",
+        "1769691932823",
+        "1769691904629",
+        "1769691899538",
+        "1769691950532"
+      ],
+      "created": "2026-01-29T13:19:56.076Z"
+    },
+    {
+      "id": "1769692826152",
+      "name": "Bewegung",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769691954923",
+        "1769691962927"
+      ],
+      "created": "2026-01-29T13:20:26.152Z"
+    },
+    {
+      "id": "1769692877604",
+      "name": "Anspiel",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769691966972",
+        "1769691981391",
+        "1769691992471",
+        "1769691962927",
+        "1769691954923",
+        "1769691932823",
+        "1769691883658"
+      ],
+      "created": "2026-01-29T13:21:17.604Z"
+    },
+    {
+      "id": "1769692904714",
+      "name": "Moderation",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769692251492",
+        "1769692260336"
+      ],
+      "created": "2026-01-29T13:21:44.714Z"
+    },
+    {
+      "id": "1769692957566",
+      "name": "Vor-Unterhaltungsprogramm",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769692260336",
+        "1769692273965",
+        "1769691851627",
+        "1769691962927",
+        "1769691966972",
+        "1769691874962",
+        "1769691954923"
+      ],
+      "created": "2026-01-29T13:22:37.566Z"
+    },
+    {
+      "id": "1769693016477",
+      "name": "Bonbons & JS-Freizeit-Flyer",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769693023233"
+      ],
+      "created": "2026-01-29T13:23:36.477Z"
+    },
+    {
+      "id": "1769693053099",
+      "name": "Ordner",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769692347167"
+      ],
+      "created": "2026-01-29T13:24:13.099Z"
+    },
+    {
+      "id": "1769693093111",
+      "name": "Fasnetsküchle & Punsch",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769691950532",
+        "1769692366053"
+      ],
+      "created": "2026-01-29T13:24:53.111Z"
+    },
+    {
+      "id": "1769693241987",
+      "name": "Spielstraße",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769693248143",
+        "1769691892946",
+        "1769691932823",
+        "1769691869067",
+        "1769691858474",
+        "1769691950532"
+      ],
+      "created": "2026-01-29T13:27:21.987Z"
+    },
+    {
+      "id": "1769694595300",
+      "name": "Alle",
+      "color": "#06b6d4",
+      "member_ids": [
+        "1769502585521",
+        "1769503515742",
+        "1769680432908",
+        "1769691844035",
+        "1769691851627",
+        "1769691858474",
+        "1769691869067",
+        "1769691874962",
+        "1769691878618",
+        "1769691892946",
+        "1769691883658",
+        "1769691899538",
+        "1769691904629",
+        "1769691911331",
+        "1769691918224",
+        "1769691932823",
+        "1769691926643",
+        "1769691950532",
+        "1769691954923",
+        "1769691962927",
+        "1769691966972",
+        "1769691981391",
+        "1769691992471",
+        "1769692251492",
+        "1769692260336",
+        "1769692273965",
+        "1769692320933",
+        "1769692338746",
+        "1769692347167",
+        "1769692366053",
+        "1769692383576",
+        "1769692408957",
+        "1769692433551",
+        "1769692507944",
+        "1769692525639",
+        "1769692533038",
+        "1769692547280",
+        "1769692992649",
+        "1769693023233",
+        "1769693248143",
+        "1769693327094"
+      ],
+      "created": "2026-01-29T13:49:55.300Z"
+    }
+  ],
+  "created": "2026-02-07T20:07:04.252Z"
+}

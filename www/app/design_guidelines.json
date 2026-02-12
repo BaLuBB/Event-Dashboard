@@ -1,0 +1,126 @@
+{
+  "identity": {
+    "name": "EventOS - Broadcast Control",
+    "persona": "E1 - The Anti-AI Designer",
+    "vibe": "Mission Control meets Concert Visuals. High contrast, precision, dark mode native.",
+    "principles": [
+      "Fusion: Broadcast TV Graphics + Airport Flight Boards",
+      "Emotion: Urgency, Synchronization, Hype",
+      "Content is King: The 'Current Phase' is the hero. Everything else supports it.",
+      "Negative Space: Dense data needs breathing room. Use wide gaps between time slots.",
+      "Contrast: Neon accents against deep matte black."
+    ]
+  },
+  "typography": {
+    "strategy": "The 'Swiss Brutalist' - Radical weight contrast with Technical precision.",
+    "fonts": {
+      "heading": {
+        "family": "Oswald",
+        "url": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap",
+        "usage": "Phase Names, Section Titles, Massive Countdowns",
+        "weights": ["500", "700"]
+      },
+      "body": {
+        "family": "Manrope",
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap",
+        "usage": "General UI, Notes, Descriptions",
+        "weights": ["400", "500"]
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap",
+        "usage": "Timestamps, Durations, Data Metrics",
+        "weights": ["400", "700"]
+      }
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090b",
+      "surface": "#18181b",
+      "surface_highlight": "#27272a",
+      "text_primary": "#fafafa",
+      "text_secondary": "#a1a1aa",
+      "border": "#27272a",
+      "accents": {
+        "live": "#ef4444",
+        "next": "#f59e0b",
+        "done": "#71717a",
+        "brand": "#3b82f6"
+      }
+    },
+    "rules": [
+      "Background is NEVER pure black (#000000). Use Zinc-950 (#09090b).",
+      "Text is NEVER pure white (#ffffff). Use Zinc-50 (#fafafa) to reduce eye strain.",
+      "Status colors (Live/Next) must be NEON/VIBRANT to cut through the dark theme.",
+      "Use 'Scanlines' or subtle grid overlays for texture."
+    ]
+  },
+  "layout": {
+    "grid_system": {
+      "viewer": "Single Column Focus. Hero (Current) takes 40% height. List (Next) takes 60%.",
+      "crew": "The 'Tetris' Grid. Dashboard metrics top, scrolling schedule left, notes/details right.",
+      "admin": "The 'Control Room' Grid. Dense, data-heavy, drag-and-drop zones."
+    },
+    "spacing": {
+      "base": "Generous. p-6 to p-8 for containers.",
+      "list_items": "gap-4 between schedule items."
+    }
+  },
+  "components": {
+    "schedule_card": {
+      "style": "Flat, border-bottom only (Flight Board style). No shadows.",
+      "interaction": "Highlight on hover. 'Live' item gets a glowing left border."
+    },
+    "countdown": {
+      "style": "Massive, Monospace, tabular-nums. Center stage.",
+      "animation": "Blinking separator (:)."
+    },
+    "phase_indicator": {
+      "style": "Pill-shaped, solid color background, bold text.",
+      "variants": ["Live (Red)", "Next (Amber)", "Future (Grey)"]
+    },
+    "buttons": {
+      "style": "Sharp edges or slightly rounded (sm). High contrast borders.",
+      "hover": "Invert colors or 'Glitch' effect."
+    }
+  },
+  "visual_enhancers": {
+    "textures": [
+      "Subtle noise overlay (opacity 0.03) on background.",
+      "Scanline effect (CSS repeating-linear-gradient) on 'Live' elements."
+    ],
+    "motion": {
+      "transitions": "Fast, snappy (0.2s ease-out).",
+      "live_pulse": "Keyframe animation for 'Live' dot opacity.",
+      "scroll": "Smooth auto-scroll to current item."
+    }
+  },
+  "images": {
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1762009365851-c5b5b1aae3b9?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "category": "app_background",
+        "description": "Abstract glowing squares - use with low opacity overlay"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1761155228019-0a29e3f6c8e9?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "category": "login_background",
+        "description": "Silhouettes against light - dramatic entrance"
+      }
+    ]
+  },
+  "tech_stack_specifics": {
+    "framework": "React (JS)",
+    "styling": "Tailwind CSS + Shadcn UI",
+    "icons": "Lucide React",
+    "performance": "Raspberry Pi 3 Optimization: Avoid heavy blurs (backdrop-filter) on large areas. Use solid semi-transparent backgrounds (bg-black/90) instead of glassmorphism if laggy."
+  },
+  "universal_guidelines": [
+    "Do not use 'Inter' for headings. Use 'Oswald'.",
+    "Do not use gradients for text.",
+    "Ensure all interactive elements have data-testid.",
+    "Use 'sonner' for notifications.",
+    "Dark mode is DEFAULT and MANDATORY for the viewer/crew interface."
+  ]
+}

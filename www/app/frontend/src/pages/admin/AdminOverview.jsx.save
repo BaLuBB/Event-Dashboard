@@ -1,0 +1,378 @@
+import { useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
+import { useAuth } from '@/context/AuthContext';
+import { useTheme } from '@/context/ThemeContext';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  Play,
+  Pause,
+  SkipForward,
+  SkipBack,
+  StopCircle,
+  Clock,
+  ListChecks,
+  Layers,
+  RefreshCw,
+  Upload,
+  Download
+} from 'lucide-react';
+import { toast } from 'sonner';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
+
+export default function AdminOverview() {
+  const { getAuthHeader } = useAuth();
+  const { settings, fetchSettings } = ustheme();
+  const [schedule, setSchedule] = useState([]);
+  const [phases, setPhases] = useState([]);
+  const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
+
+  const fetchData = useCallback(async () => {
+    try {
+      const [scheduleRes, phasesRes] = await Promise.all([
+        axios.get(`${API}/schedule`),
+        axios.get(`${API}/phases`)
+      ]);
+      setSchedule(scheduleRes.data);
+      setPhases(phasesRes.data);
+    } catch (error) {
+      console.error('Failed to fetch data:', error);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+    const interval = setInterval(() => {
+      fetchData();
+      fetchSettings();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [fetchData, fetchSettings]);
+
+  // Countdown
+  useEffect(() => {
+    const calculateCountdown = () => {
+      const currentItem = schedule.find(item => item.is_current);
+      if (!currentItem || settings.is_paused) return;
+
+      const now = new Date();
+      const [endHours, endMinutes] = currentItem.end_time.split(':').map(Number);
+      const endTime = new Date();
+      endTime.setHours(endHours, endMinutes, 0, 0);
+
+      const diff = endTime - now;
+      if (diff > 0) {
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        setCountdown({ hours, minutes, seconds });
+      } else {
+        setCountdown({ hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateCountdown();
+    const interval = setInterval(calculateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, [schedule, settings.is_paused]);
+
+  const currentItem = schedule.find(item => item.is_current);
+  const currentPhase = currentItem && phases.find(p => p.id === currentItem.phase_id);
+  const currentIndex = schedule.findIndex(item => item.is_current);
+
+  const handleControl = async (action) => {
+    try {
+      await axios.post(`${API}/control/${action}`, {}, getAuthHeader());
+      await fetchData();
+      await fetchSettings();
+      toast.success('Steuerung aktualisiert');
+    } catch (error) {
+      toast.error('Fehler bei der Steuerung');
+    }
+  };
+
+  const handleSetCurrent = async (itemId) => {
+    try {
+      await axios.post(`${API}/control/set-current/${itemId}`, {}, getAuthHeader());
+      await fetchData();
+      await fetchSettings();
+      toast.success('Aktueller Eintrag gesetzt');
+    } catch (error) {
+      toast.error('Fehler beim Setzen');
+    }
+  };
+
+  const handleSyncToExternal = async () => {
+    try {
+      await axios.post(`${API}/state/sync-to-external`, {}, getAuthHeader());
+      toast.success('State an externe API gesendet');
+    } catch (error) {
+      toast.error('Sync fehlgeschlagen');
+    }
+  };
+
+  const handleSyncFromExternal = async () => {
+    try {
+      await axios.post(`${API}/state/sync-from-external`, {}, getAuthHeader());
+      await fetchData();
+      await fetchSettings();
+      toast.success('State von externer API geladen');
+    } catch (error) {
+      toast.error('Sync fehlgeschlagen - API nicht erreichbar?');
+    }
+  };
+
+  const formatTime = (num) => String(num).padStart(2, '0');
+
+  return (
+    <div className="space-y-6" data-testid="admin-overview">
+      <div>
+        <h1 className="font-heading text-3xl font-bold" style={{ color: settings.text_color }}>
+          Übersicht
+        </h1>
+        <p className="opacity-60" style={{ color: settings.text_color }}>
+          Event-Steuerung und Live-Status
+        </p>
+      </div>
+
+      {/* Control Panel */}
+      <Card style={{ backgroundColor: settings.surface_color, borderColor: settings.surface_color }}>
+        <CardHeader>
+          <CardTitle className="font-heading flex items-center gap-2" style={{ color: settings.text_color }}>
+            <Play className="w-5 h-5" />
+            Steuerung
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-3">
+            <Button
+              onClick={() => handleControl('previous')}
+              variant="outline"
+              style={{ borderColor: settings.primary_color, color: settings.text_color }}
+              data-testid="control-previous"
+            >
+              <SkipBack className="w-4 h-4 mr-2" />
+              Zurück
+            </Button>
+
+            <Button
+              onClick={() => handleControl('pause')}
+              variant={settings.is_paused ? "default" : "outline"}
+              style={{
+                backgroundColor: settings.is_paused ? '#f59e0b' : 'transparent',
+                borderColor: '#f59e0b',
+                color: settings.is_paused ? '#000' : '#f59e0b'
+              }}
+              data-testid="control-pause"
+            >
+              {settings.is_paused ? (
+                <>
+                  <Play className="w-4 h-4 mr-2" />
+                  Fortsetzen
+                </>
+              ) : (
+                <>
+                  <Pause className="w-4 h-4 mr-2" />
+                  Pausieren
+                </>
+              )}
+            </Button>
+
+            <Button
+              onClick={() => handleControl('next')}
+              style={{ backgroundColor: settings.primary_color }}
+              data-testid="control-next"
+            >
+              <SkipForward className="w-4 h-4 mr-2" />
+              Weiter
+            </Button>
+
+            <Button
+              onClick={() => handleControl('clear-current')}
+              variant="outline"
+              style={{ borderColor: '#ef4444', color: '#ef4444' }}
+              data-testid="control-stop"
+            >
+              <StopCircle className="w-4 h-4 mr-2" />
+              Stoppen
+            </Button>
+          </div>
+
+          {/* API Sync Buttons */}
+          <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t" style={{ borderColor: settings.background_color }}>
+            <Button
+              onClick={handleSyncToExternal}
+              variant="outline"
+              style={{ borderColor: settings.primary_color, color: settings.text_color }}
+              data-testid="sync-to-external"
+            >
+              <Upload className="w-4 h-4 mr-2" />
+              An API senden
+            </Button>
+            <Button
+              onClick={handleSyncFromExternal}
+              variant="outline"
+              style={{ borderColor: settings.primary_color, color: settings.text_color }}
+              data-testid="sync-from-external"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Von API laden
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Card style={{ backgroundColor: settings.surface_color, borderColor: settings.surface_color }}>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-lg" style={{ backgroundColor: settings.primary_color }}>
+                <ListChecks className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <p className="text-sm opacity-60" style={{ color: settings.text_color }}>Zeitplan</p>
+                <p className="font-heading text-2xl font-bold" style={{ color: settings.text_color }}>
+                  {schedule.length} Einträge
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card style={{ backgroundColor: settings.surface_color, borderColor: settings.surface_color }}>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-lg" style={{ backgroundColor: '#f59e0b' }}>
+                <Layers className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <p className="text-sm opacity-60" style={{ color: settings.text_color }}>Phasen</p>
+                <p className="font-heading text-2xl font-bold" style={{ color: settings.text_color }}>
+                  {phases.length} Phasen
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card style={{ backgroundColor: settings.surface_color, borderColor: settings.surface_color }}>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-lg" style={{ backgroundColor: currentPhase?.color || '#71717a' }}>
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <p className="text-sm opacity-60" style={{ color: settings.text_color }}>Verbleibend</p>
+                <p className="font-mono text-2xl font-bold tabular-nums" style={{ color: settings.text_color }}>
+                  {formatTime(countdown.hours)}:{formatTime(countdown.minutes)}:{formatTime(countdown.seconds)}
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Current & Quick Select */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Current Item */}
+        <Card style={{ backgroundColor: settings.surface_color, borderColor: currentPhase?.color || settings.surface_color, borderWidth: '2px' }}>
+          <CardHeader>
+            <CardTitle className="font-heading" style={{ color: settings.text_color }}>
+              Aktueller Eintrag
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            {currentItem ? (
+              <div>
+                {currentPhase && (
+                  <Badge className="mb-3" style={{ backgroundColor: currentPhase.color }}>
+                    {currentPhase.name}
+                  </Badge>
+                )}
+                <h3 className="font-heading text-2xl font-bold" style={{ color: settings.text_color }}>
+                  {currentItem.title}
+                </h3>
+                <p className="time-display mt-2 opacity-60" style={{ color: settings.text_color }}>
+                  {currentItem.start_time} - {currentItem.end_time}
+                </p>
+                {currentItem.description && (
+                  <p className="mt-3 opacity-80" style={{ color: settings.text_color }}>
+                    {currentItem.description}
+                  </p>
+                )}
+                {settings.is_paused && (
+                  <Badge className="mt-4 animate-pulse" style={{ backgroundColor: '#f59e0b' }}>
+                    <Pause className="w-3 h-3 mr-1" />
+                    PAUSIERT
+                  </Badge>
+                )}
+              </div>
+            ) : (
+              <p className="opacity-50" style={{ color: settings.text_color }}>
+                Kein aktiver Eintrag. Klicke auf "Weiter" oder wähle einen Eintrag aus.
+              </p>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Quick Select */}
+        <Card style={{ backgroundColor: settings.surface_color, borderColor: settings.surface_color }}>
+          <CardHeader>
+            <CardTitle className="font-heading" style={{ color: settings.text_color }}>
+              JETZT starten
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2 max-h-[300px] overflow-auto">
+              {schedule.map((item, index) => {
+                const phase = phases.find(p => p.id === item.phase_id);
+                const isActive = item.is_current;
+
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleSetCurrent(item.id)}
+                    className={`w-full text-left p-3 rounded transition-all ${
+                      isActive ? 'ring-2' : 'hover:opacity-80'
+                    }`}
+                    style={{
+                      backgroundColor: isActive ? `${phase?.color || settings.primary_color}30` : settings.background_color,
+                      ringColor: phase?.color || settings.primary_color
+                    }}
+                    data-testid={`quick-select-${item.id}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="time-display text-xs opacity-60" style={{ color: settings.text_color }}>
+                          {item.start_time}
+                        </span>
+                        <p className="font-semibold" style={{ color: settings.text_color }}>
+                          {item.title}
+                        </p>
+                      </div>
+                      {phase && (
+                        <div
+                          className="w-3 h-3 rounded-full"
+                          style={{ backgroundColor: phase.color }}
+                        />
+                      )}
+                    </div>
+                  </button>
+                );
+              })}
+              {schedule.length === 0 && (
+                <p className="text-center py-4 opacity-50" style={{ color: settings.text_color }}>
+                  Keine Einträge vorhanden
+                </p>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}

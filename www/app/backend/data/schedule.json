@@ -1,0 +1,333 @@
+[
+  {
+    "id": "1769364258196",
+    "title": "test eintrag",
+    "description": "",
+    "start_time": "22:00",
+    "end_time": "23:59",
+    "phase_id": "2",
+    "notes": "",
+    "is_current": true,
+    "people": [
+      "1769502585521"
+    ],
+    "groups": [
+      "1769530614834"
+    ]
+  },
+  {
+    "id": "1769421275048",
+    "title": "Aufbau",
+    "description": "",
+    "start_time": "10:00",
+    "end_time": "11:00",
+    "phase_id": "1",
+    "notes": "Probe Anspiel",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769694595300",
+      "1769530614834",
+      "1769692678210"
+    ]
+  },
+  {
+    "id": "1769421327916",
+    "title": "Aufbau",
+    "description": "",
+    "start_time": "11:00",
+    "end_time": "12:00",
+    "phase_id": "1",
+    "notes": "Generalprobe",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692904714",
+      "1769692877604",
+      "1769692826152"
+    ]
+  },
+  {
+    "id": "1769421368070",
+    "title": "Mittagessen",
+    "description": "",
+    "start_time": "12:00",
+    "end_time": "12:30",
+    "phase_id": "1",
+    "notes": "Mittagessen (Adelheid)",
+    "is_current": false,
+    "people": [
+      "1769691844035"
+    ],
+    "groups": [
+      "1769694595300"
+    ]
+  },
+  {
+    "id": "1769421509460",
+    "title": "Besprechung",
+    "description": "",
+    "start_time": "12:30",
+    "end_time": "13:00",
+    "phase_id": "1",
+    "notes": "MA-Besprechung mit allen",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769694595300"
+    ]
+  },
+  {
+    "id": "1769421541257",
+    "title": "Besprechung",
+    "description": "",
+    "start_time": "13:15",
+    "end_time": "13:30",
+    "phase_id": "1",
+    "notes": "MA-Gebetsrunde",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769694595300"
+    ]
+  },
+  {
+    "id": "1769421575613",
+    "title": "Einlass 🥳",
+    "description": "",
+    "start_time": "13:30",
+    "end_time": "14:00",
+    "phase_id": "1769362929661",
+    "notes": "ca. ab 13:35 Vor-Unterhaltungsprogramm",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692796076",
+      "1769692957566",
+      "1769693053099"
+    ]
+  },
+  {
+    "id": "1769421686835",
+    "title": "Lied",
+    "description": "Band",
+    "start_time": "14:05",
+    "end_time": "14:08",
+    "phase_id": "2",
+    "notes": "Tschikitschiki bi ba bo\n• Herzlich Willkommen. Ihr\ndürft zum 1. Lied alle \naufstehen!",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692826152"
+    ]
+  },
+  {
+    "id": "1769421726134",
+    "title": "Begrüßung",
+    "description": "Moderation",
+    "start_time": "14:08",
+    "end_time": "14:12",
+    "phase_id": "2",
+    "notes": "",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692904714"
+    ]
+  },
+  {
+    "id": "1769421769062",
+    "title": "Lied",
+    "description": "Band",
+    "start_time": "14:12",
+    "end_time": "14:16",
+    "phase_id": "2",
+    "notes": "Sei ein lebendger Fisch.",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692826152"
+    ]
+  },
+  {
+    "id": "1769421809410",
+    "title": "Infos + Spiel",
+    "description": "Moderation",
+    "start_time": "14:16",
+    "end_time": "14:20",
+    "phase_id": "2",
+    "notes": "",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692904714"
+    ]
+  },
+  {
+    "id": "1769422050916",
+    "title": "Lied",
+    "description": "Band",
+    "start_time": "14:20",
+    "end_time": "14:28",
+    "phase_id": "2",
+    "notes": "Jesus fertig los\n(Themalied)",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692826152"
+    ]
+  },
+  {
+    "id": "1769422095678",
+    "title": "Anspiel",
+    "description": "Schauspieler",
+    "start_time": "14:28",
+    "end_time": "14:32",
+    "phase_id": "2",
+    "notes": "",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769628466866",
+      "1769692877604"
+    ]
+  },
+  {
+    "id": "1769422128972",
+    "title": "Andacht",
+    "description": "Lena",
+    "start_time": "14:32",
+    "end_time": "14:44",
+    "phase_id": "2",
+    "notes": "mit Gebet",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769628466866",
+      "1769530614834"
+    ]
+  },
+  {
+    "id": "1769422165780",
+    "title": "Lied",
+    "description": "Band",
+    "start_time": "14:44",
+    "end_time": "14:48",
+    "phase_id": "2",
+    "notes": "Weißt du wer ich bin",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692826152"
+    ]
+  },
+  {
+    "id": "1769422292183",
+    "title": "Spiel Straße",
+    "description": "Moderation und alle Mittarbeiter",
+    "start_time": "14:48",
+    "end_time": "16:45",
+    "phase_id": "1769422182716",
+    "notes": "• Erklärung\n• Abschluss m. Siegerehrung \n• (Pufferspiel)",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769691331698",
+      "1769693053099",
+      "1769693241987"
+    ]
+  },
+  {
+    "id": "1769423334625",
+    "title": "Lied",
+    "description": "",
+    "start_time": "16:47",
+    "end_time": "16:51",
+    "phase_id": "2",
+    "notes": "Jesus fertig los\n(Themalied)",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692826152"
+    ]
+  },
+  {
+    "id": "1769423920103",
+    "title": "Verabschiedung + Lied",
+    "description": "Moderation + Band +Technik",
+    "start_time": "16:51",
+    "end_time": "17:00",
+    "phase_id": "3",
+    "notes": "Lied 6: Weißt du wer ich bin\nLied 7: Sei mutig & stark \n(Segenslied)",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769530614834",
+      "1769692593514",
+      "1769692826152",
+      "1769692904714"
+    ]
+  },
+  {
+    "id": "1769424005694",
+    "title": "Ende & Abbau",
+    "description": "Alle Mitarbeiter und Eltern",
+    "start_time": "17:00",
+    "end_time": "18:30",
+    "phase_id": "3",
+    "notes": "• 17:15 gesammelt an der\nBühne",
+    "is_current": false,
+    "people": [],
+    "groups": [
+      "1769694595300"
+    ]
+  },
+  {
+    "id": "1769447944191",
+    "title": "DC Chillen",
+    "description": "auf Team Diamant\n\nhttps://discord.gg/BzWWTMmqWZ",
+    "start_time": "18:30",
+    "end_time": "23:00",
+    "phase_id": "3",
+    "notes": "",
+    "people": [
+      "1769502585521"
+    ],
+    "groups": [
+      "1769530614834"
+    ],
+    "is_current": false
+  },
+  {
+    "id": "1769499961086",
+    "title": "Aufbau  früh",
+    "description": "",
+    "start_time": "08:30",
+    "end_time": "10:00",
+    "phase_id": "1",
+    "notes": "Technik kontrollieren, alles einmal testen.",
+    "people": [
+      "1769503515742",
+      "1769502585521"
+    ],
+    "groups": [],
+    "is_current": false
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "eventName": "Event Dashboard",
+  "theme": "light",
+  "timezone": "Europe/Berlin",
+  "is_paused": false,
+  "event_name": "KiNa 26",
+  "primary_color": "#3b82f6",
+  "accent_color": "#ef4444",
+  "background_color": "#09090b",
+  "surface_color": "#18181b",
+  "text_color": "#fafafa",
+  "event_date": "2026-02-17",
+  "show_countdown": true,
+  "auto_scroll": true,
+  "auto_advance": true,
+  "current_item_id": "1769447944191"
+}

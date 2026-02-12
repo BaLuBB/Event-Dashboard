@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "Preparation",
+    "active": false,
+    "color": "#6366f1"
+  },
+  {
+    "id": "2",
+    "name": "Live Event",
+    "active": true,
+    "color": "#22c55e"
+  },
+  {
+    "id": "3",
+    "name": "Aftershow",
+    "active": false,
+    "color": "#f59e0b"
+  },
+  {
+    "id": "1769362929661",
+    "name": "Einlass",
+    "color": "#06b6d4",
+    "order": 3
+  },
+  {
+    "id": "1769422182716",
+    "name": "Spiel Straße",
+    "color": "#ec4899",
+    "order": 4
+  }
+]
